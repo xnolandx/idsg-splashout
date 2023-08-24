@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import styles from './page.module.css'
-import Navbar from './components/navbar'
+import Navbar from './components/navbar/navbar.js'
 
 export default function Home() {
   return (

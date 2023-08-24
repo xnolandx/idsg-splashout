@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import './globals.css'
 import styles from './page.module.css'
-import Navbar from './components/navbar'
-import Header from './components/header'
+import Navbar from './components/navbar/navbar.js'
+import Header from './components/header/header.js'
 
 
 
@@ -16,6 +16,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <body>
+        
+
       <main>
       <Header />
 
@@ -25,6 +28,7 @@ export default function RootLayout({ children }) {
       </div>
 
       </main>
+      </body>
     </html>
     
   )
