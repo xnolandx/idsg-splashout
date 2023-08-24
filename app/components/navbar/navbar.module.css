@@ -7,9 +7,29 @@
    border-style: solid;
    border-radius: 1em;
 
-   padding: .5em;
+   
 
    margin: 2em;
 
    color: rgb(170,125,255);
+
+   height: 5em;
+}
+
+.main a{
+      background-color: rgb(170,125,255);
+      color:black;
+      width: 5em;
+      height: 100%;
+      text-align: center;
+      padding-top: 1.9em;
+}
+
+.main a:nth-last-of-type(5) {
+   border-top-left-radius: 18%;
+   border-bottom-left-radius: 18%;
+}
+.main a:nth-last-of-type(1) {
+   border-top-right-radius: 18%;
+   border-bottom-right-radius: 18%;
 }
