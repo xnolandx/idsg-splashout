@@ -2,43 +2,19 @@
 
 import Link from 'next/link'
 import styles from './navbar.module.css'
-import { useState } from 'react'
+import { usePathname } from 'next/navigation'
 
 export default function Navbar(){
-  const [selectedTab, setSelectedTab] = useState('home')
+  const pathname = usePathname();
 
   return(
     <div className={styles.main}>
-      <Link 
-      href='/' 
-      className={selectedTab === 'home' ? styles.selectedTab : styles.unselectedTab}
-      onClick={() => setSelectedTab('home')}
-      > Home </Link>
-
-      <Link 
-      href='/mission' 
-      className={selectedTab === 'mission' ? styles.selectedTab : styles.unselectedTab}
-      onClick={() => setSelectedTab('mission')}
-      > Mision </Link>
-
-      <Link 
-      href='/vision' 
-      className={selectedTab === 'vision' ? styles.selectedTab : styles.unselectedTab}
-      onClick={() => setSelectedTab('vision')}
-      > Vision </Link>
-
-      <Link 
-      href='/capabilities' 
-      className={selectedTab === 'capabilities' ? styles.selectedTab : styles.unselectedTab}
-      onClick={() => setSelectedTab('capabilities')}
-      > Capabilities </Link>
-
-      <Link 
-      href='/tools' 
-      className={selectedTab === 'tools' ? styles.selectedTab : styles.unselectedTab}
-      onClick={() => setSelectedTab('tools')}
-      > Tools </Link>
-
+        <Link href='/' className={pathname === '/' ? styles.selectedTab : styles.unselectedTab}> Home </Link>
+        <Link href='/mission' className={pathname === '/mission' ? styles.selectedTab : styles.unselectedTab}> Mision </Link>
+        <Link href='/vision' className={pathname === '/vision' ? styles.selectedTab : styles.unselectedTab}> Vision </Link>
+        <Link href='/capabilities' className={pathname === '/capabilities' ? styles.selectedTab : styles.unselectedTab}> Capabilities </Link>
+        <Link href='/tools' className={pathname === '/tools' ? styles.selectedTab : styles.unselectedTab}> Tools </Link>
     </div>
+
 )
 }
