@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import styles from './navbar.module.css'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 export default function Navbar(){
   const [selectedTab, setSelectedTab] = useState('home')

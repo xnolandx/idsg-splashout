@@ -7,8 +7,8 @@ export default function Header() {
         <div className={styles.header}>
             <Image src={logo} alt="idsg-logo" className={styles.image} priority/>
             <div className={styles.headerText}>
-                <h1>Intelligence Data Solutions Group</h1>
-                <p>Weaponizing Data for the Modern Battle Field.</p>
+                <div className={styles.title}>Intelligence Data Solutions Group</div>
+                <div className={styles.subTitle}>Weaponizing Data for the Modern Battle Field.</div>
             </div>
             <Image src={logo} alt="idsg-logo" className={styles.image} priority/>
         </div>
